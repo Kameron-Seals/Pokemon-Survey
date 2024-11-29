@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form </title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title"> Favorite Starter Pokemon</h1> 
+    <p id="description"> A trainers favorite Starter pokemon</p>
+      <form method="post" id="survey-form">
+        <label id="name-label">Name:<input id="name" type="text"required placeholder="Ash Ketchum" ></lable>
+        <label id="email-label">Email:<input id="email" type="email"required placeholder="AshKetchum@kanto.com"></lable>
+        <label id="number-label">Age:<input id="number" type="number" min="10" max="95"placeholder="18"></lable>
+        <label id="Favorite-pkmn">Favorite Starter Pokemon<select id="dropdown">
+          <option value="">(select one)</option>
+          <option value="1">Bulbasaur</option>
+          <option value="2">Charmander</option>
+          <option value="3">Squirtle</option>
+          <option value="4">Chikorita</option>
+          <option value="5">Cyndaquil</option>
+          <option value="6">Totodile</option>
+          <option value="7">Treecko</option>
+          <option value="8">Torchic</option>
+          <option value="9">Mudkip</option>
+          <option value="10">Turtwig</option>
+          <option value="11">Chimchar</option>
+          <option value="12">Piplup</option>
+          <option value="13">Snivy</option>
+          <option value="14">Tepig</option>
+          <option value="15">Oshawott</option>
+          <option value="16">Chespin</option>
+          <option value="17">Fennekin</option>
+          <option value="18">Froakie</option>
+          <option value="19">Grookey</option>
+          <option value="20">Scorbunny</option>
+          <option value="21">Sobble</option>
+          <option value="22">Rowlet</option>
+          <option value="23">Litten</option>
+          <option value="24">Popplio</option>
+          <option value="25">Sprigatito</option>
+          <option value="26">Fuecoco</option>
+          <option value="27">Quaxly</option>
+          <option value="28">Pikachu</option>
+          <option value="29">Eevee</option>
+      </select>
+      <label for="attribute">Why do you Like this Pokemon?
+
+        <label for="Asthetic"><input id="asthetic" type="radio"value="Asthetic" name="attribute-type" class="inline" checked /> Design</label>
+        <label for="Competitive"><input id="competitive" type="radio"value="comptetitive" name="attribute-type" class="inline"  /> Competitive</label>
+        <label for="Lore"><input id="lore" type="radio"value="Lore" name="attribute-type" class="inline"  /> Lore</label>
+        <label for="Gimick"><input id="gimick" type="radio"value="Gimick" name="attribute-type" class="inline"  /> Gimick</label>
+        <label for="Other"><input id="other" type="radio"value="Other" name="attribute-type" class="inline"  /> Other<textarea id="other-text" name=""other-text"" rows="3" cols="15" placeholder="My favorite pokemon is the strongest of all time!" class="inline-block"></textarea></label>
+
+        <label id="Favorite-pkmn">Least Favorite Starter Pokemon<select id="dropdown">
+          <option value="">(select one)</option>
+          <option value="1">Bulbasaur</option>
+          <option value="2">Charmander</option>
+          <option value="3">Squirtle</option>
+          <option value="4">Chikorita</option>
+          <option value="5">Cyndaquil</option>
+          <option value="6">Totodile</option>
+          <option value="7">Treecko</option>
+          <option value="8">Torchic</option>
+          <option value="9">Mudkip</option>
+          <option value="10">Turtwig</option>
+          <option value="11">Chimchar</option>
+          <option value="12">Piplup</option>
+          <option value="13">Snivy</option>
+          <option value="14">Tepig</option>
+          <option value="15">Oshawott</option>
+          <option value="16">Chespin</option>
+          <option value="17">Fennekin</option>
+          <option value="18">Froakie</option>
+          <option value="19">Grookey</option>
+          <option value="20">Scorbunny</option>
+          <option value="21">Sobble</option>
+          <option value="22">Rowlet</option>
+          <option value="23">Litten</option>
+          <option value="24">Popplio</option>
+          <option value="25">Sprigatito</option>
+          <option value="26">Fuecoco</option>
+          <option value="27">Quaxly</option>
+          <option value="28">Pikachu</option>
+          <option value="29">Eevee</option>
+      </select>
+      
+    <p>What makes this pokemon your least favorite?</label><span class="clue">(Check all that apply)</span>
+      <label for="Asthetic"><input id="asthetic" type="checkbox"value="Asthetic" name="attribute-type" class="inline"  /> Design</label>
+      <label for="Competitive"><input id="competitive" type="checkbox"value="comptetitive" name="attribute-type" class="inline"  /> Competitive</label>
+        <label for="Lore"><input id="lore" type="checkbox"value="Lore" name="attribute-type" class="inline"  /> Lore</label>
+        <label for="Gimick"><input id="gimick" type="checkbox"value="Gimick" name="attribute-type" class="inline"  /> Gimick</label>
+        <label for="Other"><input id="other" type="checkbox"value="Other" name="attribute-type" class="inline"  /> Other<textarea id="other-text" name=""other-text"" rows="3" cols="15" placeholder="This pokemon is very poorly designed!" class="inline-block"></textarea></label>
+
+        <input id="submit" type="submit" value="Submit" />
+    </form>
+      
+  </body>
+</html>
