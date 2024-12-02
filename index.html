@@ -2,35 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Form</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1 id="title">Favorite Starter Pokémon</h1>
-    <p id="description">A trainer's favorite starter Pokémon survey</p>
-
+    <h1 id="title">Favorite Starter Pokemon</h1>
+    <p id="description">A trainer's favorite Starter pokemon</p>
     <form method="post" id="survey-form">
-        <!-- Name -->
-        <label for="name" id="name-label">Name:
-            <input id="name" type="text" name="name" required placeholder="Ash Ketchum">
-        </label><br><br>
-
-        <!-- Email -->
-        <label for="email" id="email-label">Email:
-            <input id="email" type="email" name="email" required placeholder="AshKetchum@kanto.com">
-        </label><br><br>
-
-        <!-- Age -->
-        <label for="number" id="number-label">Age:
-            <input id="number" type="number" name="age" min="10" max="95" placeholder="18">
-        </label><br><br>
-
-        <!-- Favorite Starter Pokémon -->
-        <fieldset>
-            <legend>Favorite Starter Pokémon</legend>
-            <label for="favorite-dropdown">Choose one:</label>
-            <select id="favorite-dropdown" name="favorite-pokemon" required>
+        <label id="name-label">Name:
+            <input id="name" type="text" required placeholder="Ash Ketchum">
+        </label>
+        <label id="email-label">Email:
+            <input id="email" type="email" required placeholder="AshKetchum@kanto.com">
+        </label>
+        <label id="number-label">Age:
+            <input id="number" type="number" min="10" max="95" placeholder="18">
+        </label>
+        <label id="favorite-pkmn">Favorite Starter Pokemon:
+            <select id="dropdown">
                 <option value="">(select one)</option>
                 <option value="1">Bulbasaur</option>
                 <option value="2">Charmander</option>
@@ -61,29 +50,30 @@
                 <option value="27">Quaxly</option>
                 <option value="28">Pikachu</option>
                 <option value="29">Eevee</option>
-                <!-- Add other options here -->
+                <!-- More options... -->
             </select>
-        </fieldset><br>
+        </label>
 
-        <!-- Why Favorite -->
-        <fieldset>
-            <legend>Why do you like this Pokémon?</legend>
-            <label for="design"><input id="design" type="radio" name="favorite-reason" value="design" required> Design</label>
-            <label for="competitive"><input id="competitive" type="radio" name="favorite-reason" value="competitive"> Competitive</label>
-            <label for="lore"><input id="lore" type="radio" name="favorite-reason" value="lore"> Lore</label>
-            <label for="gimmick"><input id="gimmick" type="radio" name="favorite-reason" value="gimmick"> Gimmick</label>
-            <label for="other-reason">
-                <input id="other-reason" type="radio" name="favorite-reason" value="other">
-                Other:
-                <textarea id="other-reason-text" name="favorite-other-text" rows="3" cols="15" placeholder="Explain why!"></textarea>
-            </label>
-        </fieldset><br>
+        <label for="attribute">Why do you like this Pokemon?</label>
+        <label for="Aesthetic">
+            <input id="aesthetic" type="radio" value="Aesthetic" name="attribute-type" class="inline" checked /> Design
+        </label>
+        <label for="Competitive">
+            <input id="competitive" type="radio" value="Competitive" name="attribute-type" class="inline" /> Competitive
+        </label>
+        <label for="Lore">
+            <input id="lore" type="radio" value="Lore" name="attribute-type" class="inline" /> Lore
+        </label>
+        <label for="Gimmick">
+            <input id="gimmick" type="radio" value="Gimmick" name="attribute-type" class="inline" /> Gimmick
+        </label>
+        <label for="Other">
+            <input id="other" type="radio" value="Other" name="attribute-type" class="inline" /> Other
+            <textarea id="other-text" name="other-text" rows="3" cols="15" placeholder="My favorite pokemon is the strongest of all time!" class="inline-block"></textarea>
+        </label>
 
-        <!-- Least Favorite Starter Pokémon -->
-        <fieldset>
-            <legend>Least Favorite Starter Pokémon</legend>
-            <label for="least-favorite-dropdown">Choose one:</label>
-            <select id="least-favorite-dropdown" name="least-favorite-pokemon">
+        <label id="least-favorite-pkmn">Least Favorite Starter Pokemon:
+            <select id="dropdown">
                 <option value="">(select one)</option>
                 <option value="1">Bulbasaur</option>
                 <option value="2">Charmander</option>
@@ -114,26 +104,30 @@
                 <option value="27">Quaxly</option>
                 <option value="28">Pikachu</option>
                 <option value="29">Eevee</option>
-                <!-- Add other options here -->
+                <!-- More options... -->
             </select>
-        </fieldset><br>
+        </label>
 
-        <!-- Why Least Favorite -->
-        <fieldset>
-            <legend>What makes this Pokémon your least favorite?</legend>
-            <label for="least-design"><input id="least-design" type="checkbox" name="least-reason[]" value="design"> Design</label>
-            <label for="least-competitive"><input id="least-competitive" type="checkbox" name="least-reason[]" value="competitive"> Competitive</label>
-            <label for="least-lore"><input id="least-lore" type="checkbox" name="least-reason[]" value="lore"> Lore</label>
-            <label for="least-gimmick"><input id="least-gimmick" type="checkbox" name="least-reason[]" value="gimmick"> Gimmick</label>
-            <label for="least-other">
-                <input id="least-other" type="checkbox" name="least-reason[]" value="other">
-                Other:
-                <textarea id="least-other-text" name="least-other-text" rows="3" cols="15" placeholder="Explain why!"></textarea>
-            </label>
-        </fieldset><br>
+        <p>What makes this pokemon your least favorite?</p>
+        <span class="clue">(Check all that apply)</span>
+        <label for="Aesthetic">
+            <input id="aesthetic" type="checkbox" value="Aesthetic" name="attribute-type" class="inline" /> Design
+        </label>
+        <label for="Competitive">
+            <input id="competitive" type="checkbox" value="Competitive" name="attribute-type" class="inline" /> Competitive
+        </label>
+        <label for="Lore">
+            <input id="lore" type="checkbox" value="Lore" name="attribute-type" class="inline" /> Lore
+        </label>
+        <label for="Gimmick">
+            <input id="gimmick" type="checkbox" value="Gimmick" name="attribute-type" class="inline" /> Gimmick
+        </label>
+        <label for="Other">
+            <input id="other" type="checkbox" value="Other" name="attribute-type" class="inline" /> Other
+            <textarea id="other-text" name="other-text" rows="3" cols="15" placeholder="This pokemon is very poorly designed!" class="inline-block"></textarea>
+        </label>
 
-        <!-- Submit -->
-        <input id="submit" type="submit" value="Submit">
+        <input id="submit" type="submit" value="Submit" />
     </form>
 </body>
 </html>
